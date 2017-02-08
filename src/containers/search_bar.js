@@ -2,10 +2,30 @@ import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
 
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			term: ''
+		}
+	}
+
+	// all DOM event handlers come along with an event object
+	onInputChange(event) {
+		console.log('Target value =', event.target.value);
+	}
+
+
 	render() {
 		return (
 			<form className="input-group">
-				<input />
+				<input 
+					placeholder="Get five-day forecasts for your favorite cities"
+					className="form-control"
+					value = { this.state.term }
+					onChange = { this.onInputChange }
+
+				/>
 				<span className="input-group-btn">
 					<button 
 						type="submit"
