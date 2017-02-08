@@ -8,24 +8,31 @@ export default class SearchBar extends Component {
 		this.state = {
 			term: ''
 		}
+
+		// Sec. 5, Lec. 53
+		// bind the context of onInputChange()
+		// this = instance of SearchBar
+		// overriding local method
+		this.onInputChange = this.onInputChange.bind(this);
 	}
 
 	// all DOM event handlers come along with an event object
 	onInputChange(event) {
-		console.log('Target value =', event.target.value);
+		this.setState({ term: event.target.value });
+		// why does state not include the event.target.value here?
+		console.log('this.state=', this.state);
 	}
 
 
 	render() {
+
 		return (
 			<form className="input-group">
 				<input 
 					placeholder="Get five-day forecasts for your favorite cities"
 					className="form-control"
-					value = { this.state.term }
-					onChange = { this.onInputChange }
-
-				/>
+					value = { this.state.term } 
+					onChange = { this.onInputChange } />
 				<span className="input-group-btn">
 					<button 
 						type="submit"
