@@ -12,5 +12,5 @@ Search Bar Design
 1.  Will the search bar be a component or a container?
         Needs to be able to modify the state of the app by calling actions.  After a user enters a city, this search bar will create an action to make an API request.  Needs to talk to Redux => make a container.
 
-
+2.  
         
