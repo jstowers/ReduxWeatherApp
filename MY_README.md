@@ -70,7 +70,11 @@ Created search bar out of a form element.
 
 When you click enter or submit, the browser thinks you're trying to make an HTTP POST request.  This is not a React feature, it is common HTML for all browsers.
 
-In a single-page application, we can prevent this behavior 
+In a single-page application, we can prevent this behavior by calling the preventDefault() function on the event:
+
+    onFormSubmit(event) {
+        event.preventDefault();
+    }
 
 
 
