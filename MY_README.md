@@ -54,10 +54,26 @@ this.onInputChange = this.onInputChange.bind(this)
     this.onInputChange = 
     replace onInputChange with this new bound instance of this function
 
+RULE OF THUMB:
 
-Another option is to use a 'fat arrow' function with no need to bind 'this' in the constructor function:
+If you have a callback function (i.e., onchange) that makes a reference to 'this', chances are you need to bind the callback function.
+
+ANOTHER OPTION:
+
+If you use a 'fat arrow' function, there is no need to bind 'this' in the constructor function:
 
     onChange = { (e) => this.onInputChange(e) } />
+
+
+***Form Submission***
+Created search bar out of a form element.
+
+When you click enter or submit, the browser thinks you're trying to make an HTTP POST request.  This is not a React feature, it is common HTML for all browsers.
+
+In a single-page application, we can prevent this behavior 
+
+
+
 
 
 
