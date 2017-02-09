@@ -106,6 +106,28 @@ Apply the middleware in src/index.js:
 
     const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
+***axios***
+Node package used to make AJAX requests from the browser.  It works almost identically to jQuery.
+
+Install package at the command line:
+
+    $ npm install --save axios
+
+Import package into src/actions/index.js:
+
+    import axios from 'axios';
+
+For a GET request to a specified url, axios returns a promise that handles the response:
+
+    axios.get('/user?ID=12345')
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+    });
+
+ 
 
 
 
