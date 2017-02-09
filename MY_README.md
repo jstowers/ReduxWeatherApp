@@ -77,6 +77,34 @@ In a single-page application, we can prevent this behavior by calling the preven
     }
 
 
+***Middleware***
+(Sec. 5, Lec. 56)
+
+Middleware are functions that take an action and depending on the action type payload, and other factors, can inspect/modify the action before it passes into the reducers.
+
+Ex) you make an HTTP request to an API, the middleware will inspect the data to ensure the right format and type before sending it to the reducers.
+
+"Gatekeepers"
+Stop and inspect any action before data passes into reducers:
+    1.  pass through action
+    2.  manipulate action
+    3.  console.log action
+    4.  stops action
+
+**redux-promise**
+Popular node package used to make AJAX requests in Redux.
+
+Install package at the command line:
+
+    $ npm install --save redux-promise
+
+Import into src/index.js:
+
+    import ReduxPromise from 'redux-promise';
+
+Apply the middleware in src/index.js:
+
+    const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 
 
