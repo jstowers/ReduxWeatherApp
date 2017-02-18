@@ -113,13 +113,13 @@ Apply the middleware in src/index.js:
 
 Node package used to make AJAX requests from the browser.  Axios works almost identically to jQuery.
 
-Install package at the command line:
+1.  Install package at the command line:
 
-    $ npm install --save axios
+        $ npm install --save axios
 
-Import package into src/actions/index.js:
+2.  Import package into src/actions/index.js:
 
-    import axios from 'axios';
+        import axios from 'axios';
 
 For a GET request to a specified url, axios returns a promise that handles the response:
 
