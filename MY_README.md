@@ -84,14 +84,17 @@ Middleware are functions that take an action and depending on the action type pa
 
 Ex) you make an HTTP request to an API, the middleware will inspect the data to ensure the right format and type before sending it to the reducers.
 
-"Gatekeepers"
+Middleware act as "Gatekeepers"
+
 Stop and inspect any action before data passes into reducers:
+
     1.  pass through action
     2.  manipulate action
     3.  console.log action
     4.  stops action
 
 **redux-promise**
+
 Popular node package used to make AJAX requests in Redux.
 
 Install package at the command line:
@@ -107,7 +110,8 @@ Apply the middleware in src/index.js:
     const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 ***axios***
-Node package used to make AJAX requests from the browser.  It works almost identically to jQuery.
+
+Node package used to make AJAX requests from the browser.  Axios works almost identically to jQuery.
 
 Install package at the command line:
 
