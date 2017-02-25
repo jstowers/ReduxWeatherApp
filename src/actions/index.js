@@ -22,7 +22,8 @@ export function fetchWeather(city) {
 	// for API calls, keeping country code static => us for United States
 	const url = `${ROOT_URL}&q=${city},us`;
 	const request = axios.get(url);
-
+	// the get request returns a promise that we pass
+	// into our actions payload
 	return {
 		type: FETCH_WEATHER,
 		payload: request

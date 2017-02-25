@@ -111,7 +111,7 @@ Apply the middleware in src/index.js:
 
 ***axios***
 
-Node package used to make AJAX requests from the browser.  Axios works almost identically to jQuery.
+A node package used to make AJAX requests from the browser.  Axios works almost identically to jQuery.
 
 1.  Install package at the command line:
 
@@ -131,7 +131,28 @@ For a GET request to a specified url, axios returns a promise that handles the r
         console.log(error);
     });
 
- 
 
+ ### February 25, 2017
+
+***Redux Promises in Practice***
+Sec. 5, Lec. 58
+
+Goals:
+
+1.  In search_bar container, want to wire up onFormSubmit() so that when user clicks the search button, we fire the action creator and make an API request.
+
+2.  search_bar is a container and it needs to be able to call an action creator.
+
+    a.  Connect search_bar to redux using the 'connect' method.
+
+    b.  Bind action creator fetchWeather() as a property of the search_bar container
+
+How:
+
+Whenever fetchWeather is called and creates an action, bindActionCreators with dispatch ensures that the action flows down into the middleware and reducers:
+
+    function mapDistpatchToProps(dispatch) {
+        return bindActionCreators({ fetchWeather}, dispatch)
+    }
 
 
