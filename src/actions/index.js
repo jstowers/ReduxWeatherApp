@@ -26,8 +26,7 @@ export function fetchWeather(city) {
 	// into our actions payload
 	// 
 	const request = axios.get(url);
-	console.log('fetchWeather request =', request);
-
+	
 	return {
 		type: FETCH_WEATHER,
 		// returning the promise as the payload

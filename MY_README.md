@@ -170,6 +170,40 @@ Sec. 5, Lec. 59
 
 4.  If the payload is NOT a promise, Redux Promise allows the action to pass through to the reducers without any intervention.
 
+Conclusion:
+Redux Promise eliminates the complexity and confusion of writing asynchronous code.  There are no callbacks, promises, and .then's.  Redux Promise provides cleaner, more understandable code.
+
+
+***Avoiding State Mutations in Reducers***
+Sec. 5, Lec. 60
+
+1.  For our app, the only property in the payload we need is:
+
+        action.payload.data
+
+2.  In the weather reducer, reducer_weather.js, we need a data structure for state that can store the payload.data for multiple cities.  An array is perfect.
+    
+    Set the initial state to an empty array:
+        
+        export default function (state = [], action) {
+
+        }
+
+3.  Don't want to mutate state.  
+
+        If you use push() to add the payload.data for the new city to the existing state array, you would be mutating state.  Push() changes an existing array, it does not create a new array.
+
+4.  Two options exist to create a new state array:
+
+    a.  Use concat()
+
+            return state.concat(action.payload.data)
+
+    b.  Use the spread syntax (...)
+
+            return [ action.payload.data, ...state ]
+
+
 
 
 
