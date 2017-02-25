@@ -157,10 +157,10 @@ Whenever fetchWeather is called and creates an action, bindActionCreators with d
 
 ##Saturday, February 25, 2017
 
-***Redux Promise Flow Process***
+***Redux Promise - Flow Process***
 Sec. 5, Lec. 59
 
-1.  From the action creator, actions/index.js, the action fetchWeather() enters the middleware Redux Promise.
+1.  From the action creator, actions/index.js, the fetchWeather() action enters the middleware Redux Promise.
 
 2.  Redux Promise receives the incoming action and looks at the payload property.
 
@@ -189,9 +189,13 @@ Sec. 5, Lec. 60
 
         }
 
-3.  Don't want to mutate state.  
+3.  Don't mutate state!
+        Why? To ensure reliability and predictability.
 
-        If you use push() to add the payload.data for the new city to the existing state array, you would be mutating state.  Push() changes an existing array, it does not create a new array.
+        Reducers are pure functions, meaning no side effects.
+        If a reducer depends on or looks to some external state to determine if its state should change, the reducer is no longer pure.  This leads to bugs and less reliability.
+
+        If you use push() to add the new city's payload.data to the existing state array, you would be mutating state.  Push() changes an existing array, it does not create a new array.
 
 4.  Two options exist to create a new state array:
 
@@ -203,7 +207,31 @@ Sec. 5, Lec. 60
 
             return [ action.payload.data, ...state ]
 
+***Building a List Container***
+Sec. 5, Lec. 61
 
+GOAL: build a component/container to render a list of the cities and their data
+
+1.  Ask . . . should this be a container or a component?
+
+        => since it will need access to redux state (list of cities),
+        it should be a container.
+
+2.  Create new container, weather_list.js
+
+3.  Create basic <html> table scaffolding:
+        
+        <table className = 'table table-hover'>
+            <thead>
+                <tr>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+4.  Need to get data from Redux into the container
 
 
 
