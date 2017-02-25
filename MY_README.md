@@ -132,7 +132,7 @@ For a GET request to a specified url, axios returns a promise that handles the r
     });
 
 
- ### February 25, 2017
+ ##Saturday, February 25, 2017
 
 ***Redux Promises in Practice***
 Sec. 5, Lec. 58
@@ -154,5 +154,22 @@ Whenever fetchWeather is called and creates an action, bindActionCreators with d
     function mapDistpatchToProps(dispatch) {
         return bindActionCreators({ fetchWeather}, dispatch)
     }
+
+##Saturday, February 25, 2017
+
+***Redux Promise Flow Process***
+Sec. 5, Lec. 59
+
+1.  From the action creator, actions/index.js, the action fetchWeather() enters the middleware Redux Promise.
+
+2.  Redux Promise receives the incoming action and looks at the payload property.
+
+3.  If the payload is a promise, Redux Promise stops the action entirely and waits until the promise resolves (the axios GET request is complete).  When resolved, Redux Promise dispatches a new action of the same type to the reducers, but with a payload of the resolved request.
+
+    =>  Redux Promise "unwraps" the promise for us because the reducers want   data, not a promise.
+
+4.  If the payload is NOT a promise, Redux Promise allows the action to pass through to the reducers without any intervention.
+
+
 
 
