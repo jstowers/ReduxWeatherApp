@@ -4,6 +4,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// import Sparklines for plotting weather data
+import { Sparklines, SparklinesLine } from 'react-sparklines';
+
 class WeatherList extends Component {
 
 	constructor(props) {
@@ -11,9 +14,15 @@ class WeatherList extends Component {
 
 	}
 
+	// function renders a single city forecast (1 row)
 	renderForecast(cityData) {
 
 		const name = cityData.city.name;
+		const temps = cityData.list.map(weather => 
+			(weather.main.temp * (9/5) - 459.67).toFixed(0)
+		)
+
+		console.log('temps array =', temps);
 
 		// this.props.weather => [{ }, { }]
 		//console.log('this.props.weather =', this.props.weather);
@@ -24,6 +33,11 @@ class WeatherList extends Component {
 			<tr key={name}>
 				<td>
 					{name}
+				</td>
+				<td>
+					<Sparklines height = {120} width = {180} data = {temps}>
+						<SparklinesLine color = 'red' />
+					</Sparklines>
 				</td>
 			</tr>
 		);

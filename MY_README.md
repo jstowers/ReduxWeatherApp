@@ -234,4 +234,9 @@ GOAL: build a component/container to render a list of the cities and their data
 4.  Need to get data from Redux into the container
 
 
+***Sparklines Graph Library***
+Sec. 5, Lec. 63
+
+
+
 
