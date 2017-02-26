@@ -9,32 +9,24 @@ class WeatherList extends Component {
 	constructor(props) {
 		super(props);
 
-
 	}
 
-	renderForecast() {
+	renderForecast(cityData) {
+
+		const name = cityData.city.name;
 
 		// this.props.weather => [{ }, { }]
-		console.log('this.props.weather =', this.props.weather);
+		//console.log('this.props.weather =', this.props.weather);
 
-		return this.props.weather.map((city, index) => {
-			return (
-				<tr key= {index}>
-					<td>
-						{city.name}
-					</td>
-					<td>
-						{city.main.temp}
-					</td>
-					<td>
-						{city.main.pressure}
-					</td>
-					<td>
-						{city.main.humidity}
-					</td>
-				</tr>
-			);
-		});
+		// add key to top-level element in a list
+
+		return (
+			<tr key={name}>
+				<td>
+					{name}
+				</td>
+			</tr>
+		);
 	}
 
 	render() {
@@ -56,13 +48,13 @@ class WeatherList extends Component {
 				<thead>
 					<tr>
 						<th>City</th>
-						<th>Temperature</th>
-						<th>Pressure</th>
-						<th>Humidity</th>
+						<th>Temperature (<sup>o</sup>F)</th>
+						<th>Pressure (psi)</th>
+						<th>Humidity (%)</th>
 					</tr>
 				</thead>
 				<tbody>
-					{this.renderForecast()}
+					{this.props.weather.map(this.renderForecast)}
 				</tbody>
 			</table>
 		);
@@ -74,3 +66,15 @@ function mapStateToProps({ weather }) {
 }
 
 export default connect(mapStateToProps)(WeatherList);
+
+/*
+	<td>
+		{(city.main.temp * (9/5) - 459.67).toFixed(0)}
+	</td>
+	<td>
+		{(city.main.pressure *0.014504).toFixed(1)}
+	</td>
+	<td>
+		{city.main.humidity}
+	</td>
+*/

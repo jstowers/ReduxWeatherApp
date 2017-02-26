@@ -4,7 +4,7 @@ import axios from 'axios';
 const API_KEY = 'a0ebec0abab86c76daa22dcf1f6bae32';
 
 // Using ES6 template strings to add API_KEY
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}`;
+const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 // only change application state through actions and reducers
 // to load our weather, we need to call an action creator to make an AJAX request
@@ -26,7 +26,7 @@ export function fetchWeather(city) {
 	// into our actions payload
 	// 
 	const request = axios.get(url);
-	
+
 	return {
 		type: FETCH_WEATHER,
 		// returning the promise as the payload
