@@ -18,31 +18,35 @@ class WeatherList extends Component {
 	renderForecast(cityData) {
 
 		const name = cityData.city.name;
+		
 		const temps = cityData.list.map(weather => 
-			(weather.main.temp * (9/5) - 459.67).toFixed(0)
-		)
+			(weather.main.temp * (9/5) - 459.67));
 
-		console.log('temps array =', temps);
+		const pressures = cityData.list.map(weather => 
+			(weather.main.pressure * 0.014504));		
 
-		// this.props.weather => [{ }, { }]
-		//console.log('this.props.weather =', this.props.weather);
+		const humidities = cityData.list.map(weather => 
+			(weather.main.humidity));
+
 
 		// add key to top-level element in a list
-
 		return (
 			<tr key={name}>
 				<td> {name} </td>
-				<td>
-					<Chart data={temps} color="orange" />
-				</td>
+				<td><Chart data={temps} color="orange" /></td>
+				<td><Chart data={pressures} color="green" /></td>
+				<td><Chart data={humidities} color="black" /></td>
 			</tr>
 		);
 	}
 
+
+
 	render() {
 
 		// props => returns an object with weather as a property
-		// the value of weather is an array, with each element 
+		// 		this.props.weather => [{ }, { }]
+		// the value of weather is an array, with each element an object 
 		// representing a city searched by the user
 		// the most recent city searched => this.props.weather[0]
 
