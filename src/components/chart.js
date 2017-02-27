@@ -21,14 +21,18 @@ function average(data) {
 
 // Just need a functional component
 export default (props) => {
+
+	console.log('chart props =', props);
+
 	return (
 		<div>
-			<Sparklines height= {120} width= {180} data= {props.data}>
+			<Sparklines 
+					svgHeight= {120} svgWidth= {200} data= {props.data}>
 					<SparklinesLine color = {props.color} />
 					<SparklinesReferenceLine type= "avg" />
 			</Sparklines>
 			<div>
-				{average(props.data)}
+				Avg = { average(props.data) + ' ' + props.units }
 			</div>
 		</div>
 	);
