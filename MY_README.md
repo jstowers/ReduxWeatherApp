@@ -236,6 +236,51 @@ GOAL: build a component/container to render a list of the cities and their data
 
 ***Sparklines Graph Library***
 Sec. 5, Lec. 63
+Add lines graphs for temperature, pressure and humidity
+
+
+***Google Maps Integration***
+Sec. 5, Lec. 66
+
+GOAL:  Add a component to display a Google map thumbnail above the city name.
+
+PROCESS:
+1.  Won't need to access state (Redux), so will make a component, not a container.
+
+2. Will pass in props from parent component.
+
+3. Make new component, google_map.js.
+
+4. Using Google Maps which already has a format for rendering maps on a screen.  But this library has no idea how to integrate into a React application.
+
+5. componentDidMount()
+
+6. new google.maps.Map(mapDiv:element, options bject {})
+
+***ES6 Destructuring***
+
+Convert these two lines of partially redundant code:
+    
+    const lon = cityData.city.coord.lon;
+    const lat = cityData.city.coord.lat;
+
+To the following:
+
+    const { lon, lat } = cityData.city.coord;
+
+What the one line of code means:
+1.  Find the coord object in cityData.city
+2.  Grab the lon and lat properties in the coord object
+3.  Assign these properties to two new variables lon and lat
+4.  Access these new variables as constants within the function
+
+
+
+
+
+
+
+
 
 
 

@@ -18,7 +18,6 @@ function average(data) {
 	return _.round(_.sum(data)/data.length);
 }
 
-
 // Just need a functional component
 export default (props) => {
 
@@ -27,7 +26,7 @@ export default (props) => {
 	return (
 		<div>
 			<Sparklines 
-					svgHeight= {120} svgWidth= {200} data= {props.data}>
+					svgHeight= {150} svgWidth= {200} data= {props.data}>
 					<SparklinesLine color = {props.color} />
 					<SparklinesReferenceLine type= "avg" />
 			</Sparklines>
