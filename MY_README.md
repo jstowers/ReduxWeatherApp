@@ -275,6 +275,21 @@ What the one line of code means:
 4.  Access these new variables as constants within the function
 
 
+***Project Review***
+1.  More Redux practice => create fetchWeather() action creator
+
+2.  Constant for action type => FETCH_WEATHER
+
+3.  Use middleware => Redux Promise => did not have to worry about promises and callbacks.
+
+4.  Use axios for get requests
+
+5.  Reducers => avoid mutating state; instead, return a new object that will take the place of the pre-existing state
+
+6.  Sparklines library => easy to use, intended to be smaller charts, consumed at a glance (up/down/stay the same)
+
+7.  Google Map => easy to place map into a component
+
 
 
 
