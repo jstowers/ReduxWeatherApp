@@ -15,6 +15,17 @@ class WeatherList extends Component {
 
 	}
 
+	componentDidMount(){
+
+		console.log('Inside componentDidUpdate');
+
+		return (
+			<button
+				className= 'btn btn-primary'>Detailed
+			</button>
+		)
+	}
+
 	// function renders a single city forecast (1 row)
 	renderForecast(cityData) {
 
@@ -63,38 +74,31 @@ class WeatherList extends Component {
 		// <tr> => defines a row
 		// <td> => defines a cell
 
+		console.log('WeatherList props', this.props);
+
 		return (
-			<table className = 'table table-hover'>
-				<thead>
-					<tr>
-						<th>City</th>
-						<th>Temperature (<sup>o</sup>F)</th>
-						<th>Pressure (psi)</th>
-						<th>Humidity (%)</th>
-					</tr>
-				</thead>
-				<tbody>
-					{this.props.weather.map(this.renderForecast)}
-				</tbody>
-			</table>
+			<div>
+				<table className = 'table table-hover'>
+					<thead>
+						<tr>
+							<th>City</th>
+							<th>Temperature (<sup>o</sup>F)</th>
+							<th>Pressure (psi)</th>
+							<th>Humidity (%)</th>
+						</tr>
+					</thead>
+					<tbody>
+						{this.props.weather.map(this.renderForecast)}
+					</tbody>
+				</table>
+
+			</div>
 		);
 	}
 }
 
 function mapStateToProps({ weather }) {
-	return { weather }; // => ES6 syntax identical to { weather: weather}
+	return { weather }; // => ES6 syntax identical to { weather: weather }
 }
 
 export default connect(mapStateToProps)(WeatherList);
-
-/*
-	<td>
-		{(city.main.temp * (9/5) - 459.67).toFixed(0)}
-	</td>
-	<td>
-		{(city.main.pressure *0.014504).toFixed(1)}
-	</td>
-	<td>
-		{city.main.humidity}
-	</td>
-*/
