@@ -290,6 +290,11 @@ What the one line of code means:
 
 7.  Google Map => easy to place map into a component
 
+##Monday, February 27, 2017##
+
+***Detailed Forecast Feature***
+
+
 
 
 

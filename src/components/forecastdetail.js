@@ -1,0 +1,1 @@
+forecastdetail.js
