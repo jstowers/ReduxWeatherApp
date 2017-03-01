@@ -21,8 +21,6 @@ function average(data) {
 // Just need a functional component
 export default (props) => {
 
-	console.log('chart props =', props);
-
 	return (
 		<div>
 			<Sparklines 
