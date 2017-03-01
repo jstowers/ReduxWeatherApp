@@ -6,24 +6,15 @@ import { connect } from 'react-redux';
 
 import Chart from '../components/chart';
 import GoogleMap from '../components/google_map';
-
+import ForecastDetail from '../components/forecastdetail';
 
 class WeatherList extends Component {
 
 	constructor(props) {
 		super(props);
 
-	}
+		this.renderForecast = this.renderForecast.bind(this);
 
-	componentDidMount(){
-
-		console.log('Inside componentDidUpdate');
-
-		return (
-			<button
-				className= 'btn btn-primary'>Detailed
-			</button>
-		)
 	}
 
 	// function renders a single city forecast (1 row)
@@ -53,11 +44,13 @@ class WeatherList extends Component {
 				<td><Chart data={temps} color="orange" units="F" /></td>
 				<td><Chart data={pressures} color="green" units="psi" /></td>
 				<td><Chart data={humidities} color="black" units="%" /></td>
+				<td><ForecastDetail
+					city = {name}
+					weather={this.props.weather} />
+				</td>
 			</tr>
 		);
 	}
-
-
 
 	render() {
 
@@ -72,30 +65,30 @@ class WeatherList extends Component {
 		// console.log('WeatherList props.weather', this.props.weather); 
 
 		// <tr> => defines a row
+		// <th> => defines a column header
 		// <td> => defines a cell
 
-		console.log('WeatherList props', this.props);
-
 		return (
-			<div>
-				<table className = 'table table-hover'>
-					<thead>
-						<tr>
-							<th>City</th>
-							<th>Temperature (<sup>o</sup>F)</th>
-							<th>Pressure (psi)</th>
-							<th>Humidity (%)</th>
-						</tr>
-					</thead>
-					<tbody>
-						{this.props.weather.map(this.renderForecast)}
-					</tbody>
-				</table>
-
-			</div>
+		
+			<table className = 'table table-hover'>
+				<thead>
+					<tr>
+						<th>City</th>
+						<th>Temperature (<sup>o</sup>F)</th>
+						<th>Pressure (psi)</th>
+						<th>Humidity (%)</th>
+					</tr>
+				</thead>
+				<tbody>
+					{this.props.weather.map(this.renderForecast)}
+				</tbody>
+			</table>
 		);
 	}
 }
+
+// 
+
 
 function mapStateToProps({ weather }) {
 	return { weather }; // => ES6 syntax identical to { weather: weather }
