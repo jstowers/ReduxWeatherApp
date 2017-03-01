@@ -294,6 +294,19 @@ What the one line of code means:
 
 ***Detailed Forecast Feature***
 
+Goal:  
+
+Add a Detail button that the user can click to view a detailed hourly forecast with temperatures, clouds, wind, and percipitation.
+
+Issue:
+
+The Detail button tracks state, receives props, and toggles on/off. But I can't find a way to insert a detailed forecast between rows of an html <table> built using the map function. Nesting <div>'s inside of <tr> and <td> causes errors.
+
+Possible solutions:
+
+1.  Add a blank <tr> that could be injected with data if the user clicks the Detailed button.
+
+2.  Insert the detailed hourly forecast in a separate component at the bottom of the mapped cites.
 
 
 

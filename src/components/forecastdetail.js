@@ -17,6 +17,7 @@ class ForecastDetail extends Component {
 		this.setState({showDetail:!this.state.showDetail});
 
 		if (this.state.showDetail){
+			console.log('In here')
 			return (
 				<ForecastHourly
 					city = {this.props.city}
@@ -40,14 +41,27 @@ class ForecastDetail extends Component {
 
 	render() {
 
-	  	return (
-	  		<div>
+		if(!this.state.showDetail) {
+			return (
 	  			<button
 					className= 'btn btn-primary'
 					onClick={ () => this.onClick() }> Detailed
 				</button>
-	  		</div>
-		);
+			);
+		}
+
+		else {
+			return (
+				<div>
+					<button className= 'btn btn-primary'
+						onClick={ () => this.onClick() }> Detailed
+					</button>
+					<ForecastHourly
+						city = {this.props.city}
+						weather = {this.props.weather} />
+				</div>
+			);
+		}
 	}
 }
 
