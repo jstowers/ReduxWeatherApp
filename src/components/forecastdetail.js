@@ -15,15 +15,6 @@ class ForecastDetail extends Component {
 		event.preventDefault;
 		console.log('ForecastDetail props', this.props);
 		this.setState({showDetail:!this.state.showDetail});
-
-		if (this.state.showDetail){
-			console.log('In here')
-			return (
-				<ForecastHourly
-					city = {this.props.city}
-					weather = {this.props.weather} />
-			);
-		}
 	}
 	
 	/*
@@ -43,7 +34,7 @@ class ForecastDetail extends Component {
 
 		if(!this.state.showDetail) {
 			return (
-	  			<button
+				<button
 					className= 'btn btn-primary'
 					onClick={ () => this.onClick() }> Detailed
 				</button>

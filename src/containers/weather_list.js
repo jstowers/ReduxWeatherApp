@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import Chart from '../components/chart';
 import GoogleMap from '../components/google_map';
 import ForecastDetail from '../components/forecastdetail';
+import ForecastHourly from '../components/forecasthourly';
 
 class WeatherList extends Component {
 
