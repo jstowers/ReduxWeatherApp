@@ -1,12 +1,17 @@
 # Redux Weather App
 
-Receive an updated 3-day weather forecast for all the U.S. cities you care about.  Check the average temperature, humidity, and air pressure.  Plan your trip with a convenient Google map included with your forecast.
++   Receive an updated 5-day weather forecast for all the U.S. cities you care about.
+
++   Check the average temperature, humidity, and air pressure.  
+
++   Plan your trip with a convenient Google map included with your forecast.
+
 
 ###Getting Started with this Repo
 
-There are two methods for getting started:
+There are two methods for getting started.
 
-####Familiar with Git?
+####A.  Familiar with Git?
 
 1.  Clone this repo at [here](https://github.com/jstowers/ReduxWeatherApp), install dependencies, then start the node webpack dev-server with the following commands:
 
@@ -24,7 +29,7 @@ There are two methods for getting started:
 ```
 
 
-####Not Familiar with Git?
+####B.  Not Familiar with Git?
 
 1.  Click [here] (https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
 
