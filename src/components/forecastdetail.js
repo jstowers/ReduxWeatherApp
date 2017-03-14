@@ -48,10 +48,10 @@ class ForecastDetail extends Component {
 				<div>
 					<button
 						className= 'btn btn-primary'
-						onClick={ () => this.onClick() }> Detailed
+						onClick={ this.onClick() }> Detailed
 					</button>
 					<div>
-						HLLLO
+						HELLO
 					</div>
 				</div>
 			);

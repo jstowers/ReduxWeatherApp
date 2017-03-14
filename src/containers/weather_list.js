@@ -14,12 +14,12 @@ class WeatherList extends Component {
 	constructor(props) {
 		super(props);
 
-		this.renderForecast = this.renderForecast.bind(this);
+		//this.renderForecast = this.renderForecast.bind(this);
 
 	}
 
 	// function renders a single city forecast (1 row)
-	renderForecast(cityData) {
+	renderForecast = (cityData) => {
 
 		const name = cityData.city.name;
 		
