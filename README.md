@@ -15,18 +15,18 @@ There are two methods for getting started.
 
 1.  Clone this repo [here](https://github.com/jstowers/ReduxWeatherApp), install dependencies, then start the node webpack dev-server with the following commands:
 
-```
-	> git clone https://github.com/jstowers/ReduxWeatherApp.git
-	> cd ReduxWeatherApp
-	> npm install
-	> npm start
-```
+    ```
+    	> git clone https://github.com/jstowers/ReduxWeatherApp.git
+    	> cd ReduxWeatherApp
+    	> npm install
+    	> npm start
+    ```
 
 2.  In a browser window, enter the following local address:
 
-```
-    http://localhost:8080
-```
+    ```
+        http://localhost:8080
+    ```
 
 3.  Check your weather and enjoy!
 
@@ -39,21 +39,21 @@ There are two methods for getting started.
 
 3.  Open your terminal and change to your project directory:
 
-```
-    > cd ReduxWeatherApp
-```
+    ```
+        > cd ReduxWeatherApp
+    ```
 
 4.  Type the following commands to start the application:
 
-```
-	> npm install
-	> npm start
-```
+    ```
+    	> npm install
+    	> npm start
+    ```
 
 5.  Open a web browser window like Chrome or Safari.  In the search bar, type the following address:
 
-```
-   http://localhost:8080/ 
-```
+    ```
+       http://localhost:8080/ 
+    ```
 
 6.  Check your weather and enjoy!
