@@ -13,8 +13,19 @@ class ForecastDetail extends Component {
 
 	onClick() {
 		event.preventDefault;
-		console.log('ForecastDetail props', this.props);
+		//console.log('ForecastDetail props', this.props);
 		this.setState({showDetail:!this.state.showDetail});
+
+		if (this.state.showDetail) {
+
+			console.log('INSIDE HERE');
+
+			return (
+				<ForecastHourly 
+					city = {this.props.city}
+					weather = {this.props.weather} />
+			)
+		}
 	}
 	
 	/*
@@ -32,14 +43,19 @@ class ForecastDetail extends Component {
 
 	render() {
 
-		if(!this.state.showDetail) {
+		//if(!this.state.showDetail) {
 			return (
-				<button
-					className= 'btn btn-primary'
-					onClick={ () => this.onClick() }> Detailed
-				</button>
+				<div>
+					<button
+						className= 'btn btn-primary'
+						onClick={ () => this.onClick() }> Detailed
+					</button>
+					<div>
+						HLLLO
+					</div>
+				</div>
 			);
-		}
+		/*}
 
 		else {
 			return (
@@ -53,6 +69,7 @@ class ForecastDetail extends Component {
 				</div>
 			);
 		}
+		*/
 	}
 }
 

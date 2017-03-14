@@ -1,25 +1,52 @@
-# ReduxSimpleStarter
+# Redux Weather App
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Receive an updated 3-day weather forecast for all the U.S. cities you care about.  Check the average temperature, humidity, and air pressure.  Plan your trip with a convenient Google map included with your forecast.
 
-###Getting Started###
+###Getting Started with this Repo
 
-There are two methods for getting started with this repo.
+There are two methods for getting started:
 
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
+####Familiar with Git?
+
+1.  Clone this repo at [here](https://github.com/jstowers/ReduxWeatherApp), install dependencies, then start the node webpack dev-server with the following commands:
 
 ```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
+	> git clone git@github.com:jstowers/ReduxWeatherApp.git
+	> cd ReduxWeatherApp
 	> npm install
 	> npm start
 ```
 
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+2.  In a browser window, enter the following local address:
+
+```
+    http://localhost:8080
+```
+
+
+####Not Familiar with Git?
+
+1.  Click [here] (https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
+
+2.  Extract the contents of the zip file to your project folder (directory).  For example, you can create a directory called ReduxWeatherApp.
+
+3.  Open your terminal and change to your project directory:
+
+```
+    > cd ReduxWeatherApp
+```
+
+4.  Type the following commands to start the application:
 
 ```
 	> npm install
 	> npm start
 ```
+
+5.  Open a web browser window like Chrome or Safari.  In the search bar, type the following address:
+
+```
+   http://localhost:8080/ 
+```
+
+6.  Check your weather and enjoy!
