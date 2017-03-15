@@ -68,7 +68,7 @@ class SearchBar extends Component {
 // Use mapDispatchToProps and dispatch to hook up action creator fetchWeather 
 // to our search_bar container
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchWeather}, dispatch);
+    return bindActionCreators({ fetchWeather }, dispatch);
 }
 
 // Connect to action creator -- injects Redux-related props into the component

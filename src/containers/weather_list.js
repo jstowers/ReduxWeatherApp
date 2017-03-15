@@ -13,9 +13,6 @@ class WeatherList extends Component {
 
 	constructor(props) {
 		super(props);
-
-		//this.renderForecast = this.renderForecast.bind(this);
-
 	}
 
 	// function renders a single city forecast (1 row)
@@ -38,9 +35,8 @@ class WeatherList extends Component {
 		const lon = cityData.city.coord.lon;
 		const lat = cityData.city.coord.lat;
 
-		// add key to top-level element in a list
 		return (
-			<tr key={name}>
+			<tr key= {name}>
 				<td><GoogleMap lon={lon} lat={lat} /></td>
 				<td><Chart data={temps} color="orange" units="F" /></td>
 				<td><Chart data={pressures} color="green" units="psi" /></td>
