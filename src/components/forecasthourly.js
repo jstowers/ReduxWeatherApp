@@ -47,7 +47,6 @@ class ForecastHourly extends Component {
 
 					</Modal.Dialog>
 				</div>
-
 			);
 		}
 	}

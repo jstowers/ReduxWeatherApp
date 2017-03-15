@@ -33,3 +33,17 @@ export function fetchWeather(city) {
 		payload: request
 	};
 }
+
+
+
+export const TRIGGER_MODAL = 'TRIGGER_MODAL';
+
+// function will close the detailed forecast modal on button click
+export function triggerModal(show) {
+	return {
+		type: TRIGGER_MODAL,
+		payload: show
+	};
+
+}
+
