@@ -9,7 +9,20 @@ margin of 20px on T/B; 0px on L/R */
 	margin: 20px 0px;
 }
 
+/*
+.hourly {
+	height: 16px;
+	overflow-y: auto;
+}
+
+.detailForecast {
+	height: 16px;
+}
+*/
+
+/* styling needed for Google maps */
 td:first-of-type, td:first-of-type > div {
 	height: 200px;
 	width: 250px;
 }
+

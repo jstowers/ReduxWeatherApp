@@ -38,7 +38,8 @@ class WeatherList extends Component {
 		const lat = cityData.city.coord.lat;
 
 		return (
-			<tr key= {name}>
+			<tr key= {name}
+				className='snapshot'>
 				<td><GoogleMap lon={lon} lat={lat} /></td>
 				<td><Chart data={temps} color="orange" units="F" /></td>
 				<td><Chart data={pressures} color="green" units="psi" /></td>

@@ -22,7 +22,7 @@ export default class ForecastDetail extends Component {
 	}
 
 	// Arrow functions capture the 'this' value of the enclosing context.
-	// Here, the enclosing context is the class ForecastDetail
+	// Here, the enclosing context is the class ForecastDetail,
 
 	openModal = () => {
 
@@ -52,7 +52,9 @@ export default class ForecastDetail extends Component {
 						{ this.props.city } Detailed Forecast
 					</Modal.Title>
 					<Modal.Body>
-						Great Body
+						<ForecastHourly
+							city = { this.props.city } 
+							weather = { this.props.weather } />
 					</Modal.Body>
 					<Modal.Footer>
 						<Button
