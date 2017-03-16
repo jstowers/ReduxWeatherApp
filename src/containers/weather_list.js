@@ -1,5 +1,6 @@
-// Container to render a list of cities and their data
+// Container to render a list of cities and their weather data
 // Saturday, February 25, 2017
+// Rev. Wednesday, March 15, 2017
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -7,7 +8,6 @@ import { connect } from 'react-redux';
 import Chart from '../components/chart';
 import GoogleMap from '../components/google_map';
 import ForecastDetail from '../components/forecastdetail';
-import ForecastHourly from '../components/forecasthourly';
 
 class WeatherList extends Component {
 
@@ -15,10 +15,12 @@ class WeatherList extends Component {
 		super(props);
 	}
 
-	// function renders a single city forecast (1 row)
+	// renders a forecast row for each city
 	renderForecast = (cityData) => {
 
+		// variables to pass to ForecastDetail component
 		const name = cityData.city.name;
+		const detailForecast = cityData.list;
 		
 		// convert temperatures from K to F
 		const temps = cityData.list.map(weather => 
@@ -42,8 +44,8 @@ class WeatherList extends Component {
 				<td><Chart data={pressures} color="green" units="psi" /></td>
 				<td><Chart data={humidities} color="black" units="%" /></td>
 				<td><ForecastDetail
-					city = {name}
-					weather={this.props.weather} />
+					city= {name}
+					weather= {detailForecast} />
 				</td>
 			</tr>
 		);
@@ -66,8 +68,7 @@ class WeatherList extends Component {
 		// <td> => defines a cell
 
 		return (
-		
-			<table className = 'table table-hover'>
+			<table className= 'table table-hover'>
 				<thead>
 					<tr>
 						<th>City</th>
@@ -84,10 +85,8 @@ class WeatherList extends Component {
 	}
 }
 
-// 
-
-
 function mapStateToProps({ weather }) {
+	// const weather = state.weather
 	return { weather }; // => ES6 syntax identical to { weather: weather }
 }
 

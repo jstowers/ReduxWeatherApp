@@ -31,7 +31,6 @@ class SearchBar extends Component {
 	}
 
 	onFormSubmit(event) {
-
 		// prevents page from re-rendering automatically
 		event.preventDefault();
 
@@ -56,8 +55,7 @@ class SearchBar extends Component {
 				<span className="input-group-btn">
 					<button 
 						type="submit"
-						className="btn btn-secondary">
-						Submit
+						className="btn btn-secondary">Submit
 					</button>
 				</span>
 			</form>
@@ -65,8 +63,16 @@ class SearchBar extends Component {
 	}
 }
 
+// ---------------------- mapDispatchToProps() ----------------------------- //
+
+// Egghead.io => http://bit.ly/2npPYwk
+// It allows us to inject certain properties into the wrapped component
+// that can then dispatch actions.
+
+
 // Use mapDispatchToProps and dispatch to hook up action creator fetchWeather 
-// to our search_bar container
+// to our search_bar container:
+
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchWeather }, dispatch);
 }

@@ -1,5 +1,6 @@
 // Reducer handles fetchWeather action
 // Saturday, 2/25/2017
+// Sec. 5, Lec. 60, 9:00
 
 import { FETCH_WEATHER } from '../actions/index';
 
@@ -36,9 +37,10 @@ export default function (state = [], action) {
 	// Switch statement only handles fetchWeather() action type
 	switch (action.type) {
 		case FETCH_WEATHER:
-			return [ action.payload.data, ...state ];
+			return [
+				action.payload.data, ...state
+			];
 	}
-
 
 	return state;
 }

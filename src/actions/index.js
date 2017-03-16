@@ -24,7 +24,6 @@ export function fetchWeather(city) {
 
 	// the axios get request returns a promise that we pass
 	// into our actions payload
-	// 
 	const request = axios.get(url);
 
 	return {
@@ -32,18 +31,5 @@ export function fetchWeather(city) {
 		// returning the promise as the payload
 		payload: request
 	};
-}
-
-
-
-export const TRIGGER_MODAL = 'TRIGGER_MODAL';
-
-// function will close the detailed forecast modal on button click
-export function triggerModal(show) {
-	return {
-		type: TRIGGER_MODAL,
-		payload: show
-	};
-
 }
 
