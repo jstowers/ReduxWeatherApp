@@ -39,7 +39,7 @@ class WeatherList extends Component {
 
 		return (
 			<tr key= {name}>
-				<td><GoogleMap lon={lon} lat={lat} /></td>
+				<td className='snapshot'><GoogleMap lon={lon} lat={lat} /></td>
 				<td><Chart data={temps} color="orange" units="F" /></td>
 				<td><Chart data={pressures} color="green" units="psi" /></td>
 				<td><Chart data={humidities} color="black" units="%" /></td>
@@ -77,7 +77,7 @@ class WeatherList extends Component {
 						<th>Humidity (%)</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody className= 'city-snapshot'>
 					{this.props.weather.map(this.renderForecast)}
 				</tbody>
 			</table>
