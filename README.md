@@ -14,13 +14,13 @@ There are two methods for getting started.
 #### A.  Familiar with Git? ####
 
 1.   Clone this repo [here](https://github.com/jstowers/ReduxWeatherApp), install dependencies, then start the node webpack dev-server with the following commands:
-
-    ```
+    
+    ````        
     	> git clone https://github.com/jstowers/ReduxWeatherApp.git
     	> cd ReduxWeatherApp
     	> npm install
     	> npm start
-    ```
+    ````
 
 2.   In a browser window, enter the following local address:
 
@@ -33,7 +33,7 @@ There are two methods for getting started.
 
 #### B.  Not Familiar with Git? ####
 
-1.   Click [here] (https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
+1.   Click (https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
 
 2.   Extract the contents of the zip file to your project folder (directory).  For example, you can create a directory called ReduxWeatherApp.
 
