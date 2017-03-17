@@ -1,28 +1,21 @@
+/* Styling for table headers and cells */
 td, th {
 	vertical-align: middle !important;
 	text-align: center !important;
 }
 
-/* Search Bar
-margin of 20px on T/B; 0px on L/R */
+/* Search Bar => margin of 20px on T/B; 0px on L/R */
 .input-group {
 	margin: 20px 0px;
 }
 
-/*
-.hourly {
-	height: 16px;
-	overflow-y: auto;
-}
-
-.detailForecast {
-	height: 16px;
-}
-*/
-
-/* styling needed for Google maps */
-td:first-of-type, td:first-of-type > div {
+/* City snapshot table cell styling for Google maps */
+td.snapshot:first-of-type, td.snapshot:first-of-type > div {
 	height: 200px;
 	width: 250px;
 }
 
+/* Hourly Forecast Modal => allows scrolling */
+.modal-allow-overflow {
+	overflow-y: visible !important;
+}

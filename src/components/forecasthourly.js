@@ -2,22 +2,21 @@ import React, { Component } from 'react';
 
 export default class ForecastHourly extends Component  {
 
-	// console.log('ForecastHourly props = ', props);
-
 	constructor(props) {
 		super(props);
 	}
 
 	renderDetailedForecast = (item) => {
 
-		console.log('item =', item);
-		console.log('item.dt_txt = ', item.dt_txt);
+		// console.log('item =', item);
+		// console.log('item.dt_txt = ', item.dt_txt);
+
+		const temp = (item.main.temp * (9/5) - 459.67).toFixed(0);
 
 		return (
-			<tr key= {item.dt} 
-				className = 'detail'>
+			<tr key= {item.dt}> 
 				<td> {item.dt_txt} </td>
-				<td> {item.main.temp} </td>
+				<td> {temp} </td>
 				<td> {item.weather[0].description} </td>
 				<td> {item.wind.speed} </td>
 			</tr>
@@ -29,16 +28,16 @@ export default class ForecastHourly extends Component  {
 
 		return (
 
-			<table className= 'table table-hover'>
+			<table>
 				<thead>
 					<tr>
 						<th>Time</th>
 						<th>Temperature (<sup>o</sup>F)</th>
 						<th>Weather</th>
-						<th>Wind Speed</th>
+						<th>Wind Speed (mph)</th>
 					</tr>
 				</thead>
-				<tbody className = 'hourly'>
+				<tbody>
 					{this.props.weather.map(this.renderDetailedForecast)}
 				</tbody>
 			</table>

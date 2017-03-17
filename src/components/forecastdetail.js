@@ -47,7 +47,10 @@ export default class ForecastDetail extends Component {
 
 		if (this.state.showModal) {
 			return (
-				<Modal.Dialog show={ this.state.showModal } onHide={ this.close }>
+				<Modal.Dialog
+					className= 'modal-allow-overflow' 
+					show={ this.state.showModal } 
+					onHide={ this.close }>
 					<Modal.Title> 
 						{ this.props.city } Detailed Forecast
 					</Modal.Title>
