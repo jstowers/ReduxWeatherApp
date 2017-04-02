@@ -43,7 +43,7 @@ http://localhost:8080
 ```
 
 Check your weather and enjoy!
-
+<br>
 ***2.  Unfamiliar with Git?***
 
 -  Click [here](https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
