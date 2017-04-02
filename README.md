@@ -38,9 +38,9 @@ Clone this repo, install dependencies, and then start the node webpack proces:
 
 In a new browser window, enter the following local address:
 
-```
+    ```
     http://localhost:8080
-```
+    ```
 
 Check your weather and enjoy!
 
