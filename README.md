@@ -66,7 +66,7 @@ From the project directory, install and start the node process:
 Open a new browser window and enter the following local address:
 
 ```
-   http://localhost:8080/ 
+http://localhost:8080/ 
 ```
 
 Check your weather and enjoy!
