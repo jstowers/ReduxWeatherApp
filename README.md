@@ -70,4 +70,4 @@ Open a new browser window and enter the following local address:
     http://localhost:8080/ 
 ```
 
--  Check your weather and enjoy!
+Check your weather and enjoy!
