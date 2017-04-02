@@ -4,6 +4,7 @@ import axios from 'axios';
 const API_KEY = 'a0ebec0abab86c76daa22dcf1f6bae32';
 
 // Using ES6 template strings to add API_KEY
+// 5-day, 3-hour forecast at openweathermap.org
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 // only change application state through actions and reducers

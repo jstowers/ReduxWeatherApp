@@ -1,59 +1,72 @@
 # Redux Weather App
 
-+   Receive an updated 5-day weather forecast for all the U.S. cities you care about.
+February 7, 2017
 
-+   Check the average temperature, humidity, and air pressure.  
+Get an updated 5-day weather forecast for all the U.S. cities you care about.
 
-+   Plan your trip with a convenient Google map included with your forecast.
+Check the average temperature, humidity, and air pressure.  
 
+Plan your trip with a convenient Google map included with your forecast.
 
-### Getting Started with this Repo ###
+## Tech
 
-There are two methods for getting started.
+-  [React](https://facebook.github.io/react/)
+-  [Redux](http://redux.js.org/)
+-  [OpenWeatherMap API](https://openweathermap.org/api)
+-  [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial)
 
-#### A.  Familiar with Git? ####
+## Build
 
-1.   Clone this repo [here](https://github.com/jstowers/ReduxWeatherApp), install dependencies, then start the node webpack dev-server with the following commands:
+-   JavaScript
+-   Node
+-   Webpack
+
+## Getting Started with this Repo
+
+There are two ways to get started with this repo:
+
+***1.  Familiar with Git?***
+
+Clone this repo, install dependencies, and then start the node webpack proces:
     
-    ````        
-    	> git clone https://github.com/jstowers/ReduxWeatherApp.git
-    	> cd ReduxWeatherApp
-    	> npm install
-    	> npm start
-    ````
+```        
+	> git clone https://github.com/jstowers/ReduxWeatherApp.git
+	> cd ReduxWeatherApp
+	> npm install
+	> npm start
+```
 
-2.   In a browser window, enter the following local address:
+In a new browser window, enter the following local address:
 
-    ```
-        http://localhost:8080
-    ```
+```
+    http://localhost:8080
+```
 
-3.   Check your weather and enjoy!
+Check your weather and enjoy!
 
+***2.  Unfamiliar with Git?***
 
-#### B.  Not Familiar with Git? ####
+Click [here](https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
 
-1.   Click (https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
+Extract the contents of the zip file into a project directory of your choice.  For instance, you could make a new directory called ReduxWeatherApp.
 
-2.   Extract the contents of the zip file to your project folder (directory).  For example, you can create a directory called ReduxWeatherApp.
+Open a terminal and change to the project directory:
 
-3.   Open your terminal and change to your project directory:
+```
+    > cd ReduxWeatherApp
+```
 
-    ```
-        > cd ReduxWeatherApp
-    ```
+From the project directory, install and start the node process:
 
-4.   Type the following commands to start the application:
+```
+	> npm install
+	> npm start
+```
 
-    ```
-    	> npm install
-    	> npm start
-    ```
+Open a new browser window and enter the following local address:
 
-5.   Open a web browser window like Chrome or Safari.  In the search bar, type the following address:
+```
+   http://localhost:8080/ 
+```
 
-    ```
-       http://localhost:8080/ 
-    ```
-
-6.   Check your weather and enjoy!
+Check your weather and enjoy!
