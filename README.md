@@ -43,30 +43,31 @@ http://localhost:8080
 ```
 
 Check your weather and enjoy!
-<br>
+
+
 ***2.  Unfamiliar with Git?***
 
--  Click [here](https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
+Click [here](https://github.com/jstowers/ReduxWeatherApp/archive/master.zip) to download the .zip file.
 
--  Extract the contents of the zip file into a project directory of your choice.  For instance, you could make a new directory called ReduxWeatherApp.
+Extract the contents of the zip file into a project directory of your choice.  For instance, you could make a new directory called ReduxWeatherApp.
 
--  Open a terminal and change to the project directory:
+Open a terminal and change to the project directory:
 
-```
-> cd ReduxWeatherApp
-```
+    ```
+    > cd ReduxWeatherApp
+    ```
 
--  From the project directory, install and start the node process:
+From the project directory, install and start the node process:
 
-```
-> npm install
-> npm start
-```
+    ```
+    > npm install
+    > npm start
+    ```
 
--  Open a new browser window and enter the following local address:
+Open a new browser window and enter the following local address:
 
-```
-http://localhost:8080/ 
-```
+    ```
+    http://localhost:8080/ 
+    ```
 
 -  Check your weather and enjoy!
