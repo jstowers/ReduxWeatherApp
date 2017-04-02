@@ -39,7 +39,7 @@ Clone this repo, install dependencies, and then start the node webpack proces:
 In a new browser window, enter the following local address:
 
 ```
-http://localhost:8080
+    http://localhost:8080
 ```
 
 Check your weather and enjoy!
@@ -53,21 +53,21 @@ Extract the contents of the zip file into a project directory of your choice.  F
 
 Open a terminal and change to the project directory:
 
-    ```
+```
     > cd ReduxWeatherApp
-    ```
+```
 
 From the project directory, install and start the node process:
 
-    ```
+```
     > npm install
     > npm start
-    ```
+```
 
 Open a new browser window and enter the following local address:
 
-    ```
+```
     http://localhost:8080/ 
-    ```
+```
 
 -  Check your weather and enjoy!
