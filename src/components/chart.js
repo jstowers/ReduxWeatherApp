@@ -1,4 +1,4 @@
-// Sparkline Char
+// Sparkline Chart
 // Reusable functional component that generates a sparkline chart
 
 //	Saturday, February 25, 2017
