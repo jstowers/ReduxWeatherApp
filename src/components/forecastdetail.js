@@ -24,6 +24,17 @@ export default class ForecastDetail extends Component {
 	// Arrow functions capture the 'this' value of the enclosing context.
 	// Here, the enclosing context is the class ForecastDetail
 
+	componentDidMount = () => {
+
+		console.log('Inside componentDidMount');
+	}
+
+	componentDidUpdate = (prevProps, prevState) => {
+
+		console.log('Inside componentDidUpdate');
+
+	}
+
 	openModal = () => {
 
 		this.setState({ showModal: true });
@@ -34,9 +45,9 @@ export default class ForecastDetail extends Component {
 		this.setState({ showModal: false });
 	}
 
-	onClick = () => {
+	onClick = (e) => {
 
-		event.preventDefault;
+		e.preventDefault;
 
 		this.openModal();
 
