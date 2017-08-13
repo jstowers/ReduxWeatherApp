@@ -308,10 +308,14 @@ Possible solutions:
 
 2.  Insert the detailed hourly forecast in a separate component at the bottom of the mapped cites.
 
+## Saturday, August 12, 2017
 
+1. Update webpack.config file to ver. 3.5.4
+2. Update webpack-dev-server to ver. 2.7.1
 
-
-
+Scripts in package.json
+//"serve": "webpack-dev-server --content-base build/",
+//"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
 
 
 
