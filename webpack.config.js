@@ -56,6 +56,14 @@ const config = {
     filename: 'bundle.js'
   },
 
+  resolve: {
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    alias: {
+        SearchBar: path.resolve(__dirname, 'containers/search_bar.js'),
+        WeatherList: path.resolve(__dirname, 'containers')
+    }
+  },
+
   // Module Loaders
   // 1. Uses the test property to identify which files need to be 
   // tansformed by the loader
@@ -63,8 +71,8 @@ const config = {
   module: {
     rules: [
       { 
-        test: /\.js$/, 
         loader: 'babel-loader',
+        test: /\.js$/,
         exclude: /node_modules/,
         query: {
            plugins: ['transform-class-properties']
