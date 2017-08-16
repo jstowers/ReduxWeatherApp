@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-
-import { 
-	Button,
-	Modal 
-} from 'react-bootstrap';
-
-import ForecastHourly from './forecasthourly';
+import { Button, Modal } from 'react-bootstrap';
+import ForecastHourly from 'ForecastHourly';
 
 // How to open/close a React Bootstrap Modal
 // http://stackoverflow.com/questions/29471368/how-to-open-close-react-bootstrap-modal-programmatically

@@ -9,8 +9,8 @@ import React, { Component } from 'react';
 
 class GoogleMap extends Component {
 
-	// a lifecycle method 
-	// called automatically after component rendered on screen
+	// a lifecycle method called automatically after 
+	// component renders on screen
 	componentDidMount() {
 
 		/* 

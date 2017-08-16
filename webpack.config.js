@@ -59,9 +59,11 @@ const config = {
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
     alias: {
-        SearchBar: path.resolve(__dirname, 'containers/search_bar.js'),
-        WeatherList: path.resolve(__dirname, 'containers')
-    }
+        ForecastHourly: 'components/forecasthourly',
+        SearchBar: 'containers/search_bar',
+        WeatherList: 'containers/weather_list'
+    },
+    extensions: ['.js', '.jsx', '.json']
   },
 
   // Module Loaders
