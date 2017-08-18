@@ -18,21 +18,21 @@ class SearchBar extends Component {
 		// bind the context of onInputChange()
 		// this = instance of SearchBar
 		// overriding local method
-		this.onInputChange = this.onInputChange.bind(this);
+		// this.onInputChange = this.onInputChange.bind(this);
 
-		this.onFormSubmit = this.onFormSubmit.bind(this);
+		// this.onFormSubmit = this.onFormSubmit.bind(this);
 	}
 
 	// all DOM event handlers come along with an event object
-	onInputChange(event) {
-		this.setState({ term: event.target.value });
+	onInputChange = (e) => {
+		this.setState({ term: e.target.value });
 		// why does state not include the updated event.target.value here?
 		// console.log('this.state=', this.state);
 	}
 
-	onFormSubmit(event) {
+	onFormSubmit = (e) => {
 		// prevents page from re-rendering automatically
-		event.preventDefault();
+		e.preventDefault();
 
 		// we need to go and fetch weather data!!
 		this.props.fetchWeather(this.state.term);
