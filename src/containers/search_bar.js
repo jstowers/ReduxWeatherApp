@@ -9,7 +9,7 @@ class SearchBar extends Component {
 
 	constructor(props) {
 		super(props);
-
+			
 		this.state = {
 			term: ''
 		}
@@ -19,15 +19,12 @@ class SearchBar extends Component {
 		// this = instance of SearchBar
 		// overriding local method
 		// this.onInputChange = this.onInputChange.bind(this);
-
 		// this.onFormSubmit = this.onFormSubmit.bind(this);
 	}
 
 	// all DOM event handlers come along with an event object
 	onInputChange = (e) => {
 		this.setState({ term: e.target.value });
-		// why does state not include the updated event.target.value here?
-		// console.log('this.state=', this.state);
 	}
 
 	onFormSubmit = (e) => {
