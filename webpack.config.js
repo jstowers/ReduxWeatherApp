@@ -59,6 +59,8 @@ const config = {
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
     alias: {
+        App: 'components/app',
+        Chart: 'components/chart',
         ForecastHourly: 'components/forecasthourly',
         SearchBar: 'containers/search_bar',
         WeatherList: 'containers/weather_list'

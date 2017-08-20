@@ -27,25 +27,24 @@ export default class ForecastDetail extends Component {
 	componentDidUpdate = (prevProps, prevState) => {
 
 		console.log('Inside componentDidUpdate');
-
+		console.log('prevProps =', prevProps);
+		console.log('prevState =', prevState);
 	}
 
 	openModal = () => {
 
 		this.setState({ showModal: true });
-
 	}
 
 	close = () => {
+
 		this.setState({ showModal: false });
 	}
 
 	onClick = (e) => {
 
 		e.preventDefault;
-
 		this.openModal();
-
 	}
 
 
